@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <math.h>
 
 double winkelBerechnungUhr(int minuten, int stunden){
-    // Stunde im Bereich [0, 11] bringen
+    // Stunde in Restklasse 12:  [0, 11] bringen
     stunden = stunden % 12;
 
     // Winkel des Stundenzeigers pro Stunde (360 Grad / 12 Stunden)

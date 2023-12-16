@@ -23,18 +23,18 @@ char intToExcel (int num){
 
     char letter;
     char res[5];
-    int ind = 0;
+    int index = 0;
 
     while(num > 0){
         int remainder = (num-1) % 26;
         letter = 'A' + remainder;
-        res[ind++] = letter;
+        res[index++] = letter;
         num = (num - 1) / 26;
     }
 
     // Rückwärtige Ausgabe der Buchstaben
     printf("Buchstabenfolge: ");
-    for (int i = ind - 1; i >= 0; i--) {
+    for (int i = index - 1; i >= 0; i--) {
         printf("%c", res[i]);
     }
     printf("\n");
